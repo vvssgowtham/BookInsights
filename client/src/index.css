@@ -1,0 +1,76 @@
+/* Container styles */
+.ShowBookList {
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.display-4 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  text-decoration: none;
+  border: 2px solid #f0ad4e;
+  color: #f0ad4e;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Book list styles */
+.list {
+  margin-top: 30px;
+}
+
+/* Book card styles */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.card-container img {
+  width: auto;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  text-align: center;
+}
+
+.desc h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.desc h3 {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.desc p {
+  margin: 10px 0;
+}

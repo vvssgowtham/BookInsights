@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const routes = require("./routes/api/books");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const jwt = require("jsonwebtoken");
+const userroute = require("./routes/api/auth");
 
 const app = express();
 
@@ -17,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // use the routes module as a middleware
 // for the /api/books path
 app.use("/api/books", routes);
+app.use("/api/auth", userroute);
 
 // Connect Database
 mongoose.connect("mongodb://127.0.0.1:27017/booksDB", { useNewUrlParser: true })
