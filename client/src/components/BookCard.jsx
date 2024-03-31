@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../index.css";
+import "./css/home.css"
 
 const BookCard = ({ book }) => {
   const navigate = useNavigate();
@@ -9,12 +9,14 @@ const BookCard = ({ book }) => {
   };
   return (
     <div className="card-container">
-      <img src={book.image} alt="Books" height={200} />
+      <img src={book.image} alt="Books" height={200} style={{borderRadius:"10px"}}/>
       <div className="desc">
         <h2>{book.title}</h2>
         <h3>{book.author}</h3>
         <p>{book.description}</p>
-        <button onClick={submit}>CheckHere</button>
+        <button className="check-here-btn" onClick={submit}>CheckHere</button>
+        <br />
+        <hr />
       </div>
     </div>
   );

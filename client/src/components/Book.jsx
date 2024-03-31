@@ -48,11 +48,11 @@ const Book = () => {
   return (
     <>
       <center>
-        <h1>Book Details</h1>
+        <h1><a href="/">Book Details</a></h1>
       </center>
       <hr />
       <br />
-      <table style={{ borderCollapse: "collapse" }}>
+      <table>
         <tbody>
           {book && (
             <>

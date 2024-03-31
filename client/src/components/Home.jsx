@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../index.css';
+//import '../index.css';
+import "./css/home.css";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import BookCard from './BookCard';
@@ -41,11 +42,11 @@ return (
             <div className='row'>
                 <div className='col-md-12'>
                     <br />
-                    <h2 className='display-4 text-center'>Books List</h2>
+                    <h2 className='display-4 text-center'>BOOK STORE</h2>
                 </div>
 
                 <div className='col-md-11'>
-                    <button style={{padding:"0.5rem",cursor: "pointer"}} onClick={createBook}>Create Book</button>
+                    <button className='check-here-btn' onClick={createBook}>Create Book</button>
                     {token ? (
                         <Link
                             to='/'
@@ -78,7 +79,6 @@ return (
                     <hr />
                 </div>
             </div>
-
             <div className='list'>{bookList}</div>
         </div>
     </div>
