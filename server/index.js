@@ -12,7 +12,7 @@ const app = express();
 // origin and credentials options
 app.use(cors(
   {
-    origin : "https://bookinsights.vercel.app",
+    origin : "https://book-insights.netlify.app",
     methods : ["GET","POST","PUT","DELETE"],
     credentials : true
   }
