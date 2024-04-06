@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes/api/books");
@@ -28,7 +29,7 @@ app.use("/api/auth", userroute);
 
 // Connect Database
 mongoose
-  .connect("mongodb://127.0.0.1:27017/booksDB", { useNewUrlParser: true })
+  .connect(process.env.URL, { useNewUrlParser: true })
   .then(() => console.log("MongoDB successfully connected"))
   .catch((err) => console.log(err));
 
