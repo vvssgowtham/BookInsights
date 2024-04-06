@@ -30,7 +30,7 @@ const Login = () => {
         try {
             setLoading(true); // Show backdrop loading
             const response = await axios.post(
-                "http://localhost:8082/api/auth/login",
+                "https://bookstore-vvssgowtham.onrender.com/api/auth/login",
                 formData
             );
             navigate("/");
