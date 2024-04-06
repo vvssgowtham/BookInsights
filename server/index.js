@@ -9,7 +9,13 @@ const app = express();
 
 // use the cors middleware with the
 // origin and credentials options
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({
+    origin: "https://book-insights.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 // use the body-parser middleware to parse JSON and URL-encoded data
 app.use(bodyParser.json());
@@ -21,9 +27,10 @@ app.use("/api/books", routes);
 app.use("/api/auth", userroute);
 
 // Connect Database
-mongoose.connect("mongodb://127.0.0.1:27017/booksDB", { useNewUrlParser: true })
+mongoose
+  .connect("mongodb://127.0.0.1:27017/booksDB", { useNewUrlParser: true })
   .then(() => console.log("MongoDB successfully connected"))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 app.get("/", (req, res) => res.send("Hello world!"));
 const port = process.env.PORT || 8082;
