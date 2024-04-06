@@ -14,7 +14,7 @@ function Home() {
 
     useEffect(() => {
         axios
-            .get('https://bookstore-vvssgowtham.onrender.com/api/books')
+            .get('https://bookstore-d1vh.onrender.com/api/books')
             .then((res) => {
                 setBooks(res.data);
             })
@@ -41,7 +41,7 @@ function Home() {
         setIsLoading(true); // Set isLoading to true when logout is clicked
         sessionStorage.removeItem('token');
         axios
-            .post('https://bookstore-vvssgowtham.onrender.com/api/logout')
+            .post('https://bookstore-d1vh.onrender.com/api/logout')
             .then((res) => {
                 setIsLoading(false); // Set isLoading to false when logout response is obtained
                 navigate("/");

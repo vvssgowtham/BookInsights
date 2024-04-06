@@ -20,7 +20,7 @@ const SignUp = () => {
         setOpenBackdrop(true); // Open backdrop
 
         try {
-            const response = await axios.post('https://bookstore-vvssgowtham.onrender.com/api/auth/signup', formData);
+            const response = await axios.post('https://bookstore-d1vh.onrender.com/api/auth/signup', formData);
             alert(response.data.message);
             navigate("/")
 
