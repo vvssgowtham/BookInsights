@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const routes = require("./routes/api/books");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const jwt = require("jsonwebtoken");
 const userroute = require("./routes/api/auth");
 
 const app = express();

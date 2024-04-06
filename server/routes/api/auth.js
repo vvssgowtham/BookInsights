@@ -10,7 +10,7 @@ router.post("/signup", async (req, res) => {
   // Check if the username already exists in the database
   const existingUser = await User.findOne({ email });
   if (existingUser) {
-    return res.status(400).json({ error: "Username already taken" });
+    return res.status(200).json({ message: "Username already taken" });
   }
 
   const user = new User({ email, password });

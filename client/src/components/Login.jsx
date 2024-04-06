@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Backdrop, CircularProgress } from "@mui/material";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -13,7 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [emailError, setEmailError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
-
+    const [loading, setLoading] = useState(false); // State for backdrop loading
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -27,14 +26,20 @@ const Login = () => {
         if (formData.password === "") {
             setPasswordError(true);
         }
-        
-        try{
-            const response = await axios.post('http://localhost:8082/api/auth/login',formData);
-            navigate('/');
-            alert("Login Successfull");
-            sessionStorage.setItem("token",response.data.token);
-        }catch(err){
+
+        try {
+            setLoading(true); // Show backdrop loading
+            const response = await axios.post(
+                "http://localhost:8082/api/auth/login",
+                formData
+            );
+            navigate("/");
+            alert("Login Successful");
+            sessionStorage.setItem("token", response.data.token);
+        } catch (err) {
             console.log(err);
+        } finally {
+            setLoading(false); // Hide backdrop loading
         }
     };
 
@@ -77,6 +82,9 @@ const Login = () => {
             <small style={styles.signupText}>
                 Need an account? <Link to="/signup">Register here</Link>
             </small>
+            <Backdrop open={loading} style={{ zIndex: 9999 }}>
+                <CircularProgress color="inherit" />
+            </Backdrop>
         </div>
     );
 };

@@ -1,78 +1,94 @@
 /* Style for the main container */
 .container {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table headers */
+th {
+  background-color: #f0f0f0;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Style for table data */
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Style for table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style for the heading */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Style for hr element */
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Style for the buttons */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the delete button */
+.delete-btn {
+  background-color: #c63543;
+  color: #fff;
+}
+
+/* Style for the edit button */
+.edit-btn {
+  background-color: #218838;
+  color: #fff;
+  margin-left: 8px;
+}
+
+/* Style for the buttons on hover */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Style for the table content */
+table td {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  .container {
+      padding: 10px;
   }
-  
-  /* Style for the table */
   table {
-    width: 100%;
-    border-collapse: collapse;
+      font-size: 14px;
   }
-  
-  /* Style for table headers */
-  th {
-    background-color: #f0f0f0;
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-  
-  /* Style for table data */
+  th,
   td {
-    padding: 8px;
-    border: 1px solid #ddd;
+      padding: 6px;
   }
-  
-  /* Style for table rows */
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  /* Style for the heading */
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  /* Style for hr element */
-  hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-  
-  /* Style for the buttons */
   button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+      padding: 6px 12px;
   }
-  
-  /* Style for the delete button */
-  .delete-btn {
-    background-color: #c63543;
-    color: #fff;
-  }
-  
-  /* Style for the edit button */
-  .edit-btn {
-    background-color: #218838;
-    color: #fff;
-    margin-left: 8px;
-  }
-  
-  /* Style for the buttons on hover */
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Style for the table content */
-  table td {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-  }
-  
+}
