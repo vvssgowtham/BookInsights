@@ -18,7 +18,7 @@ function UpdateBookInfo() {
 
   useEffect(() => {
     axios
-      .get(`https://bookstore-d1vh.onrender.com/api/books/${id}`)
+      .get(`https://bookinsights-vvssgowtham.onrender.com/api/books/${id}`)
       .then((res) => {
         setBook({
           title: res.data.title,
@@ -51,7 +51,7 @@ function UpdateBookInfo() {
     };
 
     try{
-        const response = await axios.put(`https://bookstore-d1vh.onrender.com/api/books/${id}`, data, {
+        const response = await axios.put(`https://bookinsights-vvssgowtham.onrender.com/api/books/${id}`, data, {
             headers:{
                 "Content-Type": "application/json",
                 "x-token": sessionStorage.getItem("token"),

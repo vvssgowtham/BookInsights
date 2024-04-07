@@ -25,7 +25,7 @@ const CreateBook = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://bookstore-d1vh.onrender.com/api/books/",
+        "https://bookinsights-vvssgowtham.onrender.com/api/books/",
         book,{
           headers:{
             "Content-Type": "application/json",

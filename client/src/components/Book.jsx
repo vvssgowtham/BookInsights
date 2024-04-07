@@ -15,7 +15,7 @@ const Book = () => {
 
     const deleteBook = async () => {
         if(token){
-            const response = await axios.delete(`https://bookstore-d1vh.onrender.com/api/books/${id}`, {
+            const response = await axios.delete(`https://bookinsights-vvssgowtham.onrender.com/api/books/${id}`, {
                 headers: {
                     "x-token": token,
                 },
@@ -39,7 +39,7 @@ const Book = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`https://bookstore-d1vh.onrender.com/api/books/${id}`);
+      const response = await axios.get(`https://bookinsights-vvssgowtham.onrender.com/api/books/${id}`);
       setBook(response.data);
     };
     fetchData();
